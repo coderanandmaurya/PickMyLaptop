@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PickMyLaptop</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <header class="bg-white shadow p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">PickMyLaptop</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#features" class="text-gray-600 hover:text-blue-600">Features</a></li>
+          <li><a href="#how-it-works" class="text-gray-600 hover:text-blue-600">How It Works</a></li>
+          <li><a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-10">
+    <section class="text-center">
+      <h2 class="text-4xl font-bold text-blue-700 mb-4">Find Your Perfect Laptop</h2>
+      <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+        PickMyLaptop helps you explore and compare new and old laptops by specs, price, features, and performance. 
+        Whether you're a gamer, student, or professional — we've got you covered.
+      </p>
+      <a href="#get-started" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">Get Started</a>
+    </section>
+
+    <section id="features" class="mt-20">
+      <h3 class="text-2xl font-semibold text-center text-gray-800 mb-6">Features</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="text-lg font-bold mb-2">Smart Recommendations</h4>
+          <p>Get laptop suggestions tailored to your needs, budget, and brand preferences.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="text-lg font-bold mb-2">Compare Models</h4>
+          <p>Side-by-side comparisons of specifications and performance for better decisions.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="text-lg font-bold mb-2">Latest & Legacy</h4>
+          <p>Browse both the latest laptops and older models with complete specifications.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="mt-20">
+      <h3 class="text-2xl font-semibold text-center text-gray-800 mb-6">How It Works</h3>
+      <ol class="max-w-2xl mx-auto list-decimal list-inside space-y-4 text-gray-700">
+        <li>Tell us your needs (budget, purpose, specs).</li>
+        <li>We analyze your input and fetch the best matching laptops.</li>
+        <li>Get smart, data-backed recommendations instantly.</li>
+      </ol>
+    </section>
+
+    <section id="contact" class="mt-20 text-center">
+      <h3 class="text-2xl font-semibold mb-4">Contact Us</h3>
+      <p class="text-gray-600">Have questions or feedback? Email us at <a href="mailto:support@pickmylaptop.com" class="text-blue-600 underline">support@pickmylaptop.com</a></p>
+    </section>
+  </main>
+
+  <footer class="bg-white text-center p-4 mt-20 shadow-inner">
+    <p class="text-sm text-gray-500">&copy; 2025 PickMyLaptop. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "1e4397be-2375-4136-b341-9db7f01e6fb3", // The ID of this integration.
+      region: "eu-de", // The region your integration is hosted in.
+      serviceInstanceID: "a19a5987-c291-4351-af21-5410f98336f0", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
